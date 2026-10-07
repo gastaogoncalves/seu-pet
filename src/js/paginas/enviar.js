@@ -1,4 +1,14 @@
+import listaDeProdutos from '../dadosMockados/dados.js'
+import { usuarioAtual } from '../sessao/sessao.js'
+
 async function enviar(app) {
+  const usuario = usuarioAtual()
+  if (!usuario) {
+    app.innerHTML = `<p>Entre na sua conta para anunciar um animal.</p>
+      <a href="#conta">Entrar</a>`
+    return
+  }
+
   app.innerHTML = `
     <header><h1>Anunciar animal</h1></header>
  
@@ -24,8 +34,38 @@ async function enviar(app) {
         <option>Médio</option>
         <option>Grande</option>
       </select>
+      <p id="aviso"></p>
       <button type="submit">Anunciar animal</button>
     </form>`;
+
+  document.querySelector(".form-oferta").addEventListener("submit", evento => {
+    evento.preventDefault()
+    const form = evento.target
+    const nome = form.nome.value.trim()
+
+    const repetido = listaDeProdutos.find(p =>
+      p.idUsuario === usuario.id &&
+      p.categoria === form.categoria.value &&
+      p.nome.toLowerCase() === nome.toLowerCase()
+    )
+    if (repetido) {
+      document.getElementById("aviso").textContent = "Você já anunciou esse animal."
+      return
+    }
+
+    const novo = {
+      id: Math.max(...listaDeProdutos.map(p => p.id)) + 1,
+      img: form.foto.value,
+      nome: nome,
+      porte: form.porte.value,
+      idade: Number(form.idade.value),
+      distancia: 0,
+      categoria: form.categoria.value,
+      idUsuario: usuario.id
+    }
+    listaDeProdutos.push(novo)
+    location.hash = `#mapa?${novo.id}`
+  })
 }
 export default { 
   url: '#enviar',
