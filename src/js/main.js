@@ -7,9 +7,10 @@ navbar(mapaderotas)
 
 function renderizarPagina() {
     const hash = window.location.hash || '#buscar'
-    const rota  = mapaderotas.find(tela => tela.url === hash)
+    const [url, parametro] = hash.split('?')
+    const rota  = mapaderotas.find(tela => tela.url === url)
     if (rota) {
-        rota.pagina(app)
+        rota.pagina(app, parametro ? decodeURIComponent(parametro) : undefined)
     }
 }
 window.addEventListener("hashchange", ()=>{

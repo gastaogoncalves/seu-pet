@@ -4,6 +4,7 @@ import mapa from '../paginas/mapa.js'
 import favorito from '../paginas/favorito.js'
 import conta from '../paginas/conta.js'
 import sorteio from '../paginas/sorteios/sorteio.js'
+import produtos from '../paginas/produtos/produtos.js'
 
 const mapaderotas = [
     buscar,
@@ -11,7 +12,8 @@ const mapaderotas = [
     enviar,
     favorito,
     conta,
-    sorteio
+    sorteio,
+    produtos
 ]
 
 export { mapaderotas }

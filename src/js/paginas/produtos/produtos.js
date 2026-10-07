@@ -1,6 +1,5 @@
 import './produtos.css'
 import listaDeProdutos from '../../dadosMockados/dados.js' 
-import mapa from '../../paginas/mapa.js'
 function produtos(app, categoria) {
   const lista = categoria ? listaDeProdutos.filter(prod => prod.categoria === categoria) : listaDeProdutos
   app.innerHTML = `
@@ -9,7 +8,6 @@ function produtos(app, categoria) {
         lista.length === 0 ? "<p>Nenhum animal nesta categoria.</p>" : lista.map(cartao).join("") 
      }`
         adicionarEvento(app)
-        location.hash = "#produtos"
 }
 
 function cartao(produto) {
@@ -28,9 +26,7 @@ function cartao(produto) {
 function adicionarEvento(app){
 document.querySelectorAll(".produto").forEach(card =>
   card.addEventListener("click", () => {
-    const escolhido = listaDeProdutos
-      .find(p => p.id === Number(card.dataset.id))
-    mapa.pagina(app, escolhido)
+    location.hash = `#mapa?${card.dataset.id}`
   }))
 }
 
