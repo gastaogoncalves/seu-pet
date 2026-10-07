@@ -1,17 +1,20 @@
 .produto{
     display: flex;
-    border: 1px solid #6a6262;
-    margin: 10px 5px;
-    padding: 10px;
+    border: 1px solid var(--borda);
+    margin: var(--espaco-2) 0;
+    padding: var(--espaco-3);
+    background-color: var(--superficie);
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px #6a6262;
+    border-radius: var(--raio);
+    box-shadow: 0 2px 6px var(--sombra);
+    cursor: pointer;
 }
 .produto-imagem{
     display: flex;
     align-items: center;
+    gap: var(--espaco-3);
     width: 60%;
 }
 .preco-distancia{
@@ -20,8 +23,9 @@
 .preco-especial{
     font-weight: bold;
     font-size: 1.5rem;
-    color: red;
+    color: var(--cor-primaria);
 }
 .imagem-produto{
     width: 50px;
+    border-radius: var(--espaco-2);
 }

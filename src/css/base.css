@@ -13,3 +13,14 @@ body {
   height: 100dvh;
   
 }
+
+body {
+  background-color: var(--fundo);
+  color: var(--tinta);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+#app {
+  padding: var(--espaco-3);
+  padding-bottom: calc(60px + var(--espaco-4));
+}

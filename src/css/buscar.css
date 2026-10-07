@@ -1,8 +1,7 @@
 .container-buscar{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 10px;
+    gap: var(--espaco-4);
 }
 
 .subtitulo-buscar{
@@ -19,11 +18,13 @@
     height: 30px;
     padding-left: 26px;
     box-sizing: border-box;
-    border-radius: 10px 0 0 10px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio) 0 0 var(--raio);
+    background-color: var(--superficie);
 }
 #icone-busca{
     position: absolute;
-    color: gray;
+    color: var(--tinta-2);
     padding-left: 3px;
     width: 30px;
     height: 30px;
@@ -32,6 +33,10 @@
 
 #btn-busca{
     background-color: var(--cor-primaria);
+    color: var(--cor-primaria-texto);
+    border: none;
+    border-radius: 0 var(--raio) var(--raio) 0;
+    cursor: pointer;
     height: 30px;
     width: 30px;
 }
@@ -48,8 +53,9 @@
     list-style-type: none;
 }
 .lista-categoria{
-    border: 1px #bebebe solid;
-    border-radius: 5px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
     width: 200px;
     list-style-type: none;
     height: 40px;
@@ -59,5 +65,5 @@
 }
 
 .busca-atencao{
-    color: gray;
+    color: var(--tinta-2);
 }

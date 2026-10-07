@@ -1,0 +1,16 @@
+:root {
+    --cor-primaria: #2EB51D;
+    --cor-primaria-texto: #ffffff;
+    --cor-destaque: #c41e20;
+    --fundo: #f6f7f6;
+    --superficie: #ffffff;
+    --tinta: #1f1f1f;
+    --tinta-2: #5a5959;
+    --borda: #e2e4e2;
+    --sombra: rgba(0, 0, 0, 0.08);
+    --raio: 12px;
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 16px;
+    --espaco-4: 24px;
+}

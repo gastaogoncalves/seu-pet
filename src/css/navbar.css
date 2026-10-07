@@ -8,20 +8,21 @@
     bottom: 0;
     width:440px;
     height: 60px;
-    border-top: 1px solid #da9797;
+    border-top: 1px solid var(--borda);
+    background-color: var(--superficie);
 }
 
 .navbar{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #5a5959;
+    color: var(--tinta-2);
     padding-bottom: 15px;
     gap: 33px;
 }
 .navbar-item{
     text-decoration: none;
-    color: #5a5959;
+    color: var(--tinta-2);
 }
 .navbar-item__icon{
     align-items: center;
@@ -32,6 +33,6 @@
 }
 
 .navbar-item:hover{
-    border-top: 2px solid blue;
+    color: var(--cor-primaria);
 }
 
