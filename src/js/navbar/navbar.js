@@ -14,12 +14,6 @@ navbar.innerHTML = `
             }).join('')
         }
 </nav>
-<button style="position:fixed; top: 50%; right: 30%; border-radius: 50%; width: 50px; z-index: 2;">
-    <i data-lucide="message-circle"></i>
-</button>
-<button style="position:fixed; top: 50%; right: 33%; border-radius: 50%; width: 50px; z-index: 3; background-color: red;">
-    <i data-lucide="message-circle"></i>
-</button>
 `;
 
 }

@@ -9,9 +9,8 @@ function renderizarPagina() {
     const hash = window.location.hash || '#buscar'
     const [url, parametro] = hash.split('?')
     const rota  = mapaderotas.find(tela => tela.url === url)
-    if (rota) {
-        rota.pagina(app, parametro ? decodeURIComponent(parametro) : undefined)
-    }
+        || mapaderotas.find(tela => tela.url === '#nao-encontrada')
+    rota.pagina(app, parametro ? decodeURIComponent(parametro) : undefined)
 }
 window.addEventListener("hashchange", ()=>{
     renderizarPagina()
