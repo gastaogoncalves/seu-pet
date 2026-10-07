@@ -39,7 +39,7 @@ function adicionarEvento(app){
     const botaoBusca = document.getElementById("btn-busca")
     const listaCategoria = document.querySelectorAll(".lista-categoria")
     botaoBusca.addEventListener("click",()=>{
-       location.hash = "#produtos"
+       location.hash = `#produtos?${document.getElementById("input-busca").value.trim()}`
     })
     
     listaCategoria.forEach(item => item.addEventListener("click", ()=>{

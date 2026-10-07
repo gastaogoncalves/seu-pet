@@ -1,13 +1,26 @@
 import './produtos.css'
 import listaDeProdutos from '../../dadosMockados/dados.js' 
-function produtos(app, categoria) {
-  const lista = categoria ? listaDeProdutos.filter(prod => prod.categoria === categoria) : listaDeProdutos
+function produtos(app, termo) {
+  const busca = termo ? termo.toLowerCase() : ""
+  const lista = listaDeProdutos.filter(prod =>
+    prod.categoria.toLowerCase() === busca || prod.nome.toLowerCase().includes(busca)
+  )
   app.innerHTML = `
-    <h1>${categoria ? categoria : "Todos os animais"}</h1>
-    ${ 
-        lista.length === 0 ? "<p>Nenhum animal nesta categoria.</p>" : lista.map(cartao).join("") 
-     }`
-        adicionarEvento(app)
+    <h1>${termo ? termo : "Todos os animais"}</h1>
+    <button id="ordem-distancia">Mais perto</button>
+    <button id="ordem-idade">Mais novo</button>
+    <div id="lista-animais"></div>`
+  mostrarLista(app, lista, "distancia")
+
+  document.getElementById("ordem-distancia").addEventListener("click", () => mostrarLista(app, lista, "distancia"))
+  document.getElementById("ordem-idade").addEventListener("click", () => mostrarLista(app, lista, "idade"))
+}
+
+function mostrarLista(app, lista, criterio) {
+  const ordenada = [...lista].sort((a, b) => a[criterio] - b[criterio])
+  document.getElementById("lista-animais").innerHTML =
+    ordenada.length === 0 ? "<p>Nenhum animal encontrado.</p>" : ordenada.map(cartao).join("")
+  adicionarEvento(app)
 }
 
 function cartao(produto) {
