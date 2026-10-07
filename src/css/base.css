@@ -24,3 +24,7 @@ body {
   padding: var(--espaco-3);
   padding-bottom: calc(60px + var(--espaco-4));
 }
+
+img {
+  max-width: 100%;
+}

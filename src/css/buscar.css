@@ -14,9 +14,9 @@
 }
 
 #input-busca{
-    width: 90%;
-    height: 30px;
-    padding-left: 26px;
+    flex: 1;
+    min-width: 0;
+    padding: var(--espaco-2) var(--espaco-2) var(--espaco-2) 30px;
     box-sizing: border-box;
     border: 1px solid var(--borda);
     border-radius: var(--raio) 0 0 var(--raio);
@@ -37,8 +37,8 @@
     border: none;
     border-radius: 0 var(--raio) var(--raio) 0;
     cursor: pointer;
-    height: 30px;
-    width: 30px;
+    flex: 0 0 auto;
+    padding: var(--espaco-2) var(--espaco-3);
 }
 
 .categorias-busca{
@@ -47,18 +47,16 @@
     gap: 10px;
 }
 .categoria-lista{
-    display: grid;
-    grid-template-columns: 200px repeat(auto-fill, 200px);
-    gap:5px;
+    display: flex;
+    gap: var(--espaco-2);
     list-style-type: none;
 }
 .lista-categoria{
     border: 1px solid var(--borda);
     border-radius: var(--raio);
     background-color: var(--superficie);
-    width: 200px;
+    flex: 1;
     list-style-type: none;
-    height: 40px;
     text-align:center;
     padding: 10px;
     cursor: pointer;

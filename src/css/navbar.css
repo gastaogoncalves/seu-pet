@@ -3,10 +3,12 @@
     align-items: center;
     justify-content: center;
     list-style-type: none;
-    gap: 12%;
     position: fixed;
     bottom: 0;
-    width:440px;
+    left: 0;
+    right: 0;
+    max-width: 440px;
+    margin: 0 auto;
     height: 60px;
     border-top: 1px solid var(--borda);
     background-color: var(--superficie);
@@ -14,11 +16,11 @@
 
 .navbar{
     display: flex;
+    flex: 1;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: var(--tinta-2);
     padding-bottom: 15px;
-    gap: 33px;
 }
 .navbar-item{
     text-decoration: none;
@@ -28,8 +30,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 42px;
-    font-size: 1.2rem;
+    font-size: 0.85rem;
 }
 
 .navbar-item:hover{

@@ -15,10 +15,10 @@
     display: flex;
     align-items: center;
     gap: var(--espaco-3);
-    width: 60%;
+    flex: 1;
 }
 .preco-distancia{
-    width: 25%;
+    flex: 0 0 auto;
 }
 .preco-especial{
     font-weight: bold;
@@ -26,6 +26,7 @@
     color: var(--cor-primaria);
 }
 .imagem-produto{
-    width: 50px;
+    flex: 0 0 50px;
+    min-width: 0;
     border-radius: var(--espaco-2);
 }
