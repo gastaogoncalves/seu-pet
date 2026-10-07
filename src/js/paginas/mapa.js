@@ -6,7 +6,7 @@ function mapa(app, id) {
     <img src="${produto.img}" alt="${produto.nome}">
     <h1>${produto.nome}</h1>
     <p>${produto.porte} · ${produto.idade} ano(s) · ${produto.distancia} m</p>
-    <section class="mapa-provisorio">Mapa dos mercados: aula 17.</section>`
+    <section class="mapa-provisorio">Mapa dos animais.</section>`
 
 }
 export default { 

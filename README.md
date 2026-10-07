@@ -1,15 +1,10 @@
-# Ki-Oferta
+# Seu Pet
 
 > **Projeto em construção.** Este repositório está em desenvolvimento ativo como projeto de estudos (FATEC) e ainda não representa uma versão final.
 
 ## Sobre o projeto
 
-O Ki-Oferta é um modelo de aplicação criado com duas frentes de aprendizado em mente:
-
-1. **Desenvolvimento web moderno** — uso de ferramentas atuais de build e um fluxo de trabalho baseado em módulos JavaScript (ES Modules), organização de código em componentes/páginas e boas práticas de estruturação de projeto front-end.
-2. **Conceitos de desenvolvimento de aplicativos** — o mesmo código-fonte web é empacotado como um aplicativo mobile nativo (Android/iOS) usando o [Capacitor](https://capacitorjs.com/), permitindo estudar como uma aplicação web se transforma em um app instalável, com acesso a APIs nativas do dispositivo (câmera, splash screen, etc.).
-
-A ideia é usar um único projeto para explorar, ao mesmo tempo, o "mundo web" e o "mundo mobile", entendendo onde as duas abordagens se encontram e onde elas divergem.
+O Seu Pet é um aplicativo de adoção de animais, feito a partir do esqueleto do KiOferta para o Desafio 1 da FATEC.
 
 ## Padrão utilizado
 
@@ -33,8 +28,8 @@ O projeto segue uma estrutura simples de **SPA (Single Page Application) em Java
 1. Clone o repositório e acesse a pasta do projeto:
 
    ```bash
-   git clone https://github.com/faustinopsy/ki-oferta
-   cd ki-oferta
+   git clone https://github.com/gastaogoncalves/seu-pet
+   cd seu-pet
    ```
 
 2. Instale as dependências:
