@@ -1,46 +1,124 @@
 
 const listaDeProdutos = [
     {
-     img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz9Jxt7sfYOHyIl89NMatNZdCBN9vpynyDsTgtIkQ71g&s=10",
-     nome: "café três corações", 
-     preco: 12.50, 
+     id: 1,
+     img : "https://placedog.net/320/240?id=1",
+     nome: "Thor", 
+     porte: "Grande",
+     idade: 3,
      distancia: 600,
-     categoria: "Bebidas"
+     categoria: "Cães",
+     idUsuario: 1
     },
     {
-     img : "https://www.atacadao.com.br/_next/image?url=https%3A%2F%2Fatacadaobr.vtexassets.com%2Farquivos%2Fids%2F1526633-300-auto%3Fwidth%3D300%26height%3Dauto%26aspect%3Dtrue&w=640&q=75",
-     nome: "café pilão", 
-     preco: 9.50, 
+     id: 2,
+     img : "https://placedog.net/320/240?id=2",
+     nome: "Mel", 
+     porte: "Pequeno",
+     idade: 1,
      distancia: 2000,
-     categoria: "Bebidas"
+     categoria: "Cães",
+     idUsuario: 1
     },
     {
-     img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiwO0woTn_0_I8dh2wGt_jnwbzmm-U2ujzENHLHCh-mg&s=10",
-     nome: "café expresso", 
-     preco: 16.50, 
+     id: 3,
+     img : "https://cdn2.thecatapi.com/images/asd.jpg",
+     nome: "Luna", 
+     porte: "Pequeno",
+     idade: 1,
      distancia: 200,
-     categoria: "Bebidas"
+     categoria: "Gatos",
+     idUsuario: 2
     },
     {
-     img : "https://www.atacadao.com.br/_next/image?url=https%3A%2F%2Fatacadaobr.vtexassets.com%2Farquivos%2Fids%2F1504764-300-auto%3Fwidth%3D300%26height%3Dauto%26aspect%3Dtrue&w=640&q=75",
-     nome: "Detergente ype", 
-     preco: 2.50, 
-     distancia: 200,
-     categoria: "Limpeza"
+     id: 4,
+     img : "https://placedog.net/320/240?id=4",
+     nome: "Bob", 
+     porte: "Médio",
+     idade: 2,
+     distancia: 1500,
+     categoria: "Cães",
+     idUsuario: 2
     },
     {
-     img : "https://www.atacadao.com.br/_next/image?url=https%3A%2F%2Fatacadaobr.vtexassets.com%2Farquivos%2Fids%2F1517769-300-auto%3Fwidth%3D300%26height%3Dauto%26aspect%3Dtrue&w=640&q=75",
-     nome: "Detergente limpol", 
-     preco: 16.50, 
-     distancia: 200,
-     categoria: "Limpeza"
+     id: 5,
+     img : "https://cdn2.thecatapi.com/images/ar3.jpg",
+     nome: "Nina", 
+     porte: "Pequeno",
+     idade: 5,
+     distancia: 800,
+     categoria: "Gatos",
+     idUsuario: 2
     },
     {
-     img : "https://www.atacadao.com.br/_next/image?url=https%3A%2F%2Fatacadaobr.vtexassets.com%2Farquivos%2Fids%2F1512405-300-auto%3Fwidth%3D300%26height%3Dauto%26aspect%3Dtrue&w=640&q=75",
-     nome: "Detegente minuano", 
-     preco: 2.50, 
-     distancia: 200,
-     categoria: "Limpeza"
+     id: 6,
+     img : "https://placedog.net/320/240?id=6",
+     nome: "Rex", 
+     porte: "Grande",
+     idade: 6,
+     distancia: 3500,
+     categoria: "Cães",
+     idUsuario: 3
+    },
+    {
+     id: 7,
+     img : "https://placedog.net/320/240?id=7",
+     nome: "Pipoca", 
+     porte: "Pequeno",
+     idade: 1,
+     distancia: 400,
+     categoria: "Cães",
+     idUsuario: 3
+    },
+    {
+     id: 8,
+     img : "https://cdn2.thecatapi.com/images/7cm.jpg",
+     nome: "Fred", 
+     porte: "Médio",
+     idade: 2,
+     distancia: 1200,
+     categoria: "Gatos",
+     idUsuario: 3
+    },
+    {
+     id: 9,
+     img : "https://placedog.net/320/240?id=9",
+     nome: "Amora", 
+     porte: "Médio",
+     idade: 1,
+     distancia: 5000,
+     categoria: "Cães",
+     idUsuario: 4
+    },
+    {
+     id: 10,
+     img : "https://placedog.net/320/240?id=10",
+     nome: "Zeus", 
+     porte: "Grande",
+     idade: 1,
+     distancia: 4200,
+     categoria: "Cães",
+     idUsuario: 4
+    },
+    {
+     id: 11,
+     img : "https://cdn2.thecatapi.com/images/6eo.jpg",
+     nome: "Mia", 
+     porte: "Pequeno",
+     idade: 3,
+     distancia: 900,
+     categoria: "Gatos",
+     idUsuario: 4
+    },
+    {
+     id: 12,
+     img : "https://placedog.net/320/240?id=12",
+     nome: "Toby", 
+     porte: "Pequeno",
+     idade: 4,
+     distancia: 2500,
+     categoria: "Cães",
+     idUsuario: 2
     }
 ]
 export default listaDeProdutos;
