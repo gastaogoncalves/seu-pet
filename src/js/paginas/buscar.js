@@ -1,3 +1,4 @@
+import './buscar.css'
 function buscar(app){
     app.innerHTML = `
         <div class="container-buscar">
