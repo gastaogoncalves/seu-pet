@@ -6,6 +6,15 @@
 
 O Seu Pet é um aplicativo de adoção de animais, feito a partir do esqueleto do KiOferta para o Desafio 1 da FATEC.
 
+## Tema sorteado
+
+Adoção de animais: protetores anunciam em grupos de mensagem e o anúncio se perde no dia seguinte. O Seu Pet responde: qual animal para adoção está mais perto de mim?
+
+## Integrantes
+
+- Danilo Martins
+- Gastão Victor
+
 ## Padrão utilizado
 
 O projeto segue uma estrutura simples de **SPA (Single Page Application) em JavaScript puro (vanilla JS)**, sem frameworks como React, Vue ou Angular. Os principais pontos do padrão são:
