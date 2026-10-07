@@ -1,42 +1,30 @@
 function buscar(app){
     app.innerHTML = `
         <div class="container-buscar">
-            <h2>Radar de Promoções</h2>
-            <p class="subtitulo-buscar"> O que Você quer Comprar mais barato?</p>
+            <h2>Adote um Pet</h2>
+            <p class="subtitulo-buscar"> Qual animal você quer adotar?</p>
             <div class="grupo-input">
             <label for="input-busca"><i data-lucide="search" id="icone-busca"></i> </label>
                 <input 
                     type="text" 
                     id="input-busca" 
-                    placeholder="Produto ou marca"
-                    aria-label="campo busca de produto"
+                    placeholder="Nome do animal"
+                    aria-label="campo busca de animal"
                 >
                 <button id="btn-busca"> 
                     <i data-lucide="arrow-right"></i>
                 </button>
                 
             </div>
-            <p class="busca-atencao">Preços da semana de 10 a 16 de agosto, enviado por que mestá no mercado</p>
+            <p class="busca-atencao">Animais disponíveis para adoção perto de você</p>
             <div class="categorias-busca">
                 <p>Categoria</p>
                 <ul class="categoria-lista">
                     <li class="lista-categoria">
-                        Mercearia
+                        Cães
                     </li>
                     <li class="lista-categoria">
-                        Carnes
-                    </li>
-                    <li class="lista-categoria">
-                        Hortifrúti
-                    </li>
-                    <li class="lista-categoria">
-                        Bebidas
-                    </li>
-                    <li class="lista-categoria">
-                        Limpeza
-                    </li>
-                    <li class="lista-categoria">
-                        Higiene
+                        Gatos
                     </li>
                 </ul>
             </div>
