@@ -10,18 +10,18 @@
 }
 
 .sorteio__apoio {
-  color: var(--tinta-2, #5a6270);
+  color: var(--tinta-2);
   font-size: 0.85rem;
 }
 
 .sorteio__alerta {
-  color: var(--cor-destaque, #c41e20);
+  color: var(--cor-destaque);
   font-size: 0.85rem;
   font-weight: 700;
 }
 
 .sorteio__aviso {
-  color: var(--cor-destaque, #c41e20);
+  color: var(--cor-destaque);
   font-size: 0.85rem;
   min-height: 1rem;
 }
@@ -33,20 +33,18 @@
 
 .sorteio__form input {
   flex: 1;
-  height: 40px;
-  padding: 0 12px;
-  border: 1px solid #c9d1db;
+  padding: var(--espaco-2) 12px;
+  border: 1px solid var(--borda);
   border-radius: 8px;
 }
 
 .sorteio__botao {
   flex: 0 0 auto;
-  height: 40px;
-  padding: 0 16px;
+  padding: var(--espaco-2) var(--espaco-3);
   border: none;
   border-radius: 8px;
-  background-color: var(--cor-primaria, #1e4b8e);
-  color: #ffffff;
+  background-color: var(--cor-primaria);
+  color: var(--cor-primaria-texto);
   font-weight: 700;
   cursor: pointer;
 }
@@ -58,8 +56,8 @@
 
 .sorteio__botao--vazado {
   background-color: transparent;
-  color: var(--cor-primaria, #1e4b8e);
-  border: 1px solid var(--cor-primaria, #1e4b8e);
+  color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
 }
 
 .sorteio__lista {
@@ -75,7 +73,7 @@
   justify-content: space-between;
   gap: 12px;
   padding: 10px 12px;
-  border: 1px solid #c9d1db;
+  border: 1px solid var(--borda);
   border-radius: 8px;
 }
 
@@ -87,13 +85,13 @@
   flex: 0 0 auto;
   border: none;
   background: none;
-  color: var(--tinta-2, #5a6270);
+  color: var(--tinta-2);
   font-size: 0.8rem;
   cursor: pointer;
 }
 
 .sorteio__vazio {
-  color: var(--tinta-2, #5a6270);
+  color: var(--tinta-2);
   font-size: 0.9rem;
 }
 
@@ -111,9 +109,8 @@
 
 .sorteio__semente input {
   flex: 1;
-  height: 40px;
-  padding: 0 12px;
-  border: 1px solid #c9d1db;
+  padding: var(--espaco-2) 12px;
+  border: 1px solid var(--borda);
   border-radius: 8px;
 }
 
@@ -143,7 +140,7 @@
   justify-content: space-between;
   gap: 12px;
   padding: 12px;
-  border: 1px solid #c9d1db;
+  border: 1px solid var(--borda);
   border-radius: 8px;
 }
 
@@ -154,6 +151,6 @@
 
 .sorteio__tema {
   flex: 0 0 auto;
-  color: var(--cor-primaria, #1e4b8e);
+  color: var(--cor-primaria);
   text-align: right;
 }
