@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Seu Pet · Relatório do Desafio 1</title>
+<style>
+  @page { size: A4; margin: 16mm 16mm 18mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1c1f1d; margin: 0; }
+  .sobre { color: #c2410c; font-size: 8pt; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin: 0; }
+  h1 { font-size: 20pt; margin: 2pt 0 2pt; color: #1f3d2a; }
+  .linha { color: #535a55; margin: 0 0 8pt; padding-bottom: 8pt; border-bottom: 2px solid #1f7a3a; }
+  h2 { font-size: 12.5pt; color: #1f3d2a; margin: 14pt 0 5pt; break-after: avoid; }
+  h3 { font-size: 10.5pt; margin: 8pt 0 2pt; break-after: avoid; }
+  p { margin: 0 0 6pt; }
+  .pergunta { background: #e3f2e7; border-left: 4px solid #1f7a3a; padding: 8pt 10pt; margin: 8pt 0; }
+  .pergunta strong { display: block; color: #1f7a3a; font-size: 8.5pt; text-transform: uppercase; letter-spacing: .05em; }
+  .pergunta span { font-size: 12pt; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt; font-size: 9pt; break-inside: avoid; }
+  th { background: #1f3d2a; color: #fff; text-align: left; padding: 4pt 6pt; }
+  td { border-bottom: 1px solid #dfe3e0; padding: 4pt 6pt; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f6f4; }
+  .situacoes { display: flex; gap: 8pt; margin: 6pt 0; }
+  .situacoes div { flex: 1; border: 1px solid #dfe3e0; border-radius: 6pt; padding: 7pt; font-size: 9pt; }
+  .situacoes b { display: block; font-size: 7.5pt; color: #535a55; text-transform: uppercase; }
+  pre { background: #f4f6f4; border: 1px solid #dfe3e0; border-radius: 4pt; padding: 7pt 9pt; font-size: 8pt; line-height: 1.35; margin: 4pt 0 8pt; break-inside: avoid; }
+  code { font-family: "Menlo", "Consolas", monospace; font-size: 8.5pt; }
+  ul { margin: 0 0 6pt; padding-left: 14pt; }
+  li { margin-bottom: 2pt; }
+  .decisao { break-inside: avoid; }
+  .capturas { display: flex; flex-wrap: wrap; gap: 8pt; justify-content: space-between; break-before: page; }
+  .capturas figure { margin: 0; flex: 0 0 23%; text-align: center; font-size: 8pt; color: #535a55; break-inside: avoid; }
+  .capturas img { width: 100%; border: 1px solid #dfe3e0; border-radius: 6pt; }
+  .nota { font-size: 8.5pt; color: #535a55; font-style: italic; }
+</style>
+</head>
+<body>
+
+<p class="sobre">Fatec Mogi das Cruzes · ADS · Desafio 1 · O mesmo esqueleto, outro negócio</p>
+<h1>Seu Pet · adoção de animais</h1>
+<p class="linha">Integrantes: Danilo Martins e Gastão Victor · Repositório: github.com/gastaogoncalves/seu-pet</p>
+
+<h2>R1 · O problema e quem usa</h2>
+<p>Protetores e ONGs anunciam animais em grupos de mensagem, e o anúncio se perde no dia seguinte. Quem quer adotar não tem onde procurar com calma, nem como comparar.</p>
+<div class="pergunta"><strong>A pergunta que o aplicativo responde</strong><span>Qual animal para adoção está mais perto de mim, e ele cabe na minha casa?</span></div>
+<p>A frase decide a ordem de cada tela. A distância é o número grande, na cor de destaque. Porte e idade vêm logo ao lado, porque dizem se o animal cabe na rotina e no espaço de quem adota.</p>
+<div class="situacoes">
+  <div><b>Maioria do público</b>Pessoa que quer adotar, no celular, à noite. Não tem conta e não quer criar uma. Busca, filtra por porte e abre o detalhe.</div>
+  <div><b>Quem alimenta o app</b>Protetora independente que resgatou um filhote. Entra na conta e anuncia em um formulário só, sem precisar repetir o anúncio em vários grupos.</div>
+  <div><b>Uso de acompanhamento</b>ONG que confere, na própria conta, quais animais ainda estão anunciados, para não publicar o mesmo animal duas vezes.</div>
+</div>
+
+<h2>R2 · O mapa de equivalência</h2>
+<table>
+  <tr><th>No KiOferta</th><th>No seu tema</th><th>No Seu Pet</th></tr>
+  <tr><td>Produto</td><td>O que a pessoa procura</td><td>Um animal com certo porte e espécie (ex.: cão de porte pequeno)</td></tr>
+  <tr><td>Oferta</td><td>O registro publicado por alguém</td><td>O anúncio de adoção: Thor, cão grande, 3 anos, em Braz Cubas</td></tr>
+  <tr><td>Mercado</td><td>Quem oferece, ou onde acontece</td><td>O protetor ou ONG e o bairro onde o animal está</td></tr>
+  <tr><td>Preço</td><td>O número que decide a escolha</td><td>A distância até o animal, em km</td></tr>
+  <tr><td>Distância</td><td>O segundo critério de decisão</td><td>A idade do animal (segundo critério de ordenação)</td></tr>
+  <tr><td>Contribuinte</td><td>Quem publica e precisa de conta</td><td>Protetor, abrigo ou ONG cadastrado</td></tr>
+  <tr><td>Visitante</td><td>Quem só consulta, sem cadastro</td><td>A pessoa que quer adotar</td></tr>
+</table>
+
+<h2>R3 · A estrutura</h2>
+<pre>src/
+├── index.html                  uma página só, com #app e o #navbar
+├── css/
+│   ├── tokens.css              cores, tamanhos de texto e grade de 4px
+│   ├── base.css                reset, botões e o que vale para o site inteiro
+│   └── style.css               importa tokens e base
+└── js/
+    ├── main.js                 roteador: hashchange + find na lista de rotas
+    ├── rotas/rotas.js          a lista única das seis telas
+    ├── navbar/navbar.js (+css) menu gerado a partir da lista, marca o item ativo
+    ├── sessao/sessao.js        entrar, sair e usuarioAtual
+    ├── dadosMockados/          animais.js (14), usuarios.js (4), locais.js (9)
+    └── paginas/
+        ├── inicio/             busca dominante e atalhos por espécie e porte
+        ├── resultados/         filter + sort + map, ordenação e estado vazio
+        ├── detalhe/            find pelo id vindo da lista
+        ├── publicar/           formulário, find para recusar repetido e push
+        ├── conta/              login, filter pelo id do usuário e sair
+        ├── naoEncontrada/      destino do find que devolve undefined
+        └── cartaoAnimal/       cartão reutilizado em resultados e conta</pre>
+<p>Cada tela é um módulo que exporta <code>{ url, label, icon, pagina }</code> e importa o próprio CSS. As telas que não aparecem no menu (resultados, detalhe, rota inexistente) têm <code>label: ""</code>. Os parâmetros vão no hash (<code>#detalhe?id=3</code>, <code>#resultados?busca=thor&amp;porte=Grande</code>). O <code>main.js</code> lê esses parâmetros com <code>URLSearchParams</code>, então o F5 leva sempre à mesma tela.</p>
+
+<h2>R4 · Três decisões e um descartado</h2>
+<div class="decisao">
+<h3>1. A distância é o número de destaque</h3>
+<p>No KiOferta o preço é vermelho e grande. No Seu Pet a adoção é gratuita, então o número que decide é a distância, porque ninguém adota um animal a 40 km sem pensar duas vezes. Ela é o único elemento na cor de destaque nas listas e no detalhe.</p>
+</div>
+<div class="decisao">
+<h3>2. O local é um cadastro separado</h3>
+<p>No início, cada animal guardava a própria distância em metros. Quando o formulário de publicar ficou pronto, não havia como o protetor digitar uma distância. Criamos o <code>locais.js</code>: o animal guarda <code>idLocal</code>, e a distância sai de um <code>find</code>. O formulário oferece um <code>select</code> de bairros, e todo animal do mesmo bairro tem a mesma distância.</p>
+</div>
+<div class="decisao">
+<h3>3. Filtros no endereço, sem recarregar a tela</h3>
+<p>Busca por texto, espécie, porte e ordenação funcionam juntos e atualizam a lista a cada tecla. O endereço é atualizado com <code>history.replaceState</code>, que não dispara o <code>hashchange</code>: o campo não perde o foco e o F5 ainda volta para a mesma busca.</p>
+</div>
+<div class="decisao">
+<h3>Descartado: a tela de mapa</h3>
+<p>O KiOferta tem um mapa. Começamos usando a rota <code>#mapa</code> como detalhe do animal, mas um mapa de verdade pediria a localização do usuário antes de mostrar qualquer coisa, e quem chega quer ver o animal, não autorizar o GPS. A distância em km no cartão já responde à pergunta. A rota virou <code>#detalhe</code>.</p>
+</div>
+
+<h2>R5 · A divisão de tarefas</h2>
+<p>O grupo tem dois integrantes. A divisão real ficou assim, com os números do <code>git log</code> (<code>git shortlog -sn</code>):</p>
+<table>
+  <tr><th>Integrante</th><th>Responsabilidade principal</th><th>Entregáveis</th><th>Commits</th></tr>
+  <tr><td>Gastão Victor</td><td>Adaptação ao tema e sessão</td><td>Ponto de partida, dados mockados de adoção, rota com id para o F5, módulo de sessão e tela de conta, recusa de repetido, busca com estado vazio, rota inexistente, tokens.css e troca de Grid por Flexbox</td><td>19</td></tr>
+  <tr><td>Danilo Martins</td><td>Telas finais e relatório</td><td>Tokens ampliados e navbar com item ativo, dados com locais e protetores, telas de início, resultados (filtros e ordenação), detalhe, anunciar e conta com CSS próprio, README e este relatório</td><td>8</td></tr>
+</table>
+<p class="nota">Rascunho: confiram os números com o git log no dia da entrega. Se outros commits entrarem, atualizem esta tabela.</p>
+
+<h2>R6 · Duas dificuldades reais</h2>
+<div class="decisao">
+<h3>1. O F5 no detalhe mostrava "Escolha um animal"</h3>
+<p><b>O erro:</b> ao abrir um animal e apertar F5, a tela voltava vazia. <b>O que achamos que era:</b> os dados mockados sendo recarregados. <b>O que era de fato:</b> o animal era passado como objeto direto para a função da tela (<code>mapa(app, produto)</code>), e o endereço ficava só <code>#mapa</code>. No F5 esse objeto não existe mais. Passamos a levar o id no hash (<code>#detalhe?id=3</code>), e o roteador separa a rota do parâmetro com <code>split('?')</code>.</p>
+</div>
+<div class="decisao">
+<h3>2. Os ícones sumiam depois de navegar</h3>
+<p><b>O erro:</b> a lupa da busca e os ícones das telas apareciam na primeira carga e sumiam ao trocar de tela. <b>O que achamos que era:</b> algum problema na importação do Lucide. <b>O que era de fato:</b> o <code>createIcons()</code> rodava uma única vez, no fim do <code>main.js</code>. O HTML novo de cada tela chegava depois disso, com <code>&lt;i data-lucide&gt;</code> que ninguém convertia. Agora o roteador chama <code>createIcons()</code> depois de cada <code>pagina()</code>.</p>
+</div>
+<p class="nota">Rascunho: as duas falhas aconteceram de verdade no histórico do projeto. Ajustem o "o que achamos que era" com as palavras do grupo.</p>
+
+<h2>R7 · O que ficou de fora</h2>
+<ul>
+  <li><b>Persistência:</b> o animal publicado some no F5. É o combinado do desafio (sem backend), mas vale dizer.</li>
+  <li><b>Fotos:</b> as imagens vêm de serviços externos. Sem internet, o cartão mostra o ícone da espécie no lugar.</li>
+  <li><b>Distância fixa:</b> a distância é medida até a Fatec Mogi, não até o usuário, porque não pedimos localização (ver o descartado).</li>
+  <li><b>Processo de adoção:</b> "Quero adotar" só abre um e-mail para o protetor. Não há agenda de visita nem registro de que o animal já foi adotado.</li>
+  <li><b>Cadastro e edição:</b> não é possível criar conta nova, nem editar ou remover um anúncio já publicado.</li>
+</ul>
+
+<div class="capturas">
+  <figure><img src="capturas/1-inicio.png"><figcaption>1 · Início</figcaption></figure>
+  <figure><img src="capturas/2-resultados.png"><figcaption>2 · Resultados</figcaption></figure>
+  <figure><img src="capturas/2b-busca-vazia.png"><figcaption>2 · Busca sem resultado</figcaption></figure>
+  <figure><img src="capturas/3-detalhe.png"><figcaption>3 · Detalhe</figcaption></figure>
+  <figure><img src="capturas/4-publicar.png"><figcaption>4 · Anunciar</figcaption></figure>
+  <figure><img src="capturas/5b-login-erro.png"><figcaption>5 · Erro no login</figcaption></figure>
+  <figure><img src="capturas/5-conta.png"><figcaption>5 · Minha conta</figcaption></figure>
+  <figure><img src="capturas/6-rota-inexistente.png"><figcaption>6 · Rota inexistente</figcaption></figure>
+</div>
+<p class="nota" style="text-align:center;margin-top:6pt">Capturas em 360 × 740 px.</p>
+
+</body>
+</html>
