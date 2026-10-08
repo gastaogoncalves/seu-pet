@@ -1,0 +1,124 @@
+.detalhe {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-4);
+}
+
+.detalhe--vazio {
+    align-items: center;
+    padding-top: var(--espaco-5);
+    text-align: center;
+    color: var(--tinta-2);
+}
+
+.detalhe--vazio h1 {
+    color: var(--tinta);
+}
+
+.detalhe__foto {
+    aspect-ratio: 4 / 3;
+}
+
+.detalhe__foto svg {
+    flex: 0 0 25%;
+    height: auto;
+}
+
+.detalhe__cabecalho h1 {
+    font-size: var(--txt-2xl);
+}
+
+.detalhe__decisao {
+    display: flex;
+    gap: var(--espaco-4);
+    padding: var(--espaco-4);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+}
+
+.detalhe__distancia {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--espaco-1);
+    min-width: 0;
+}
+
+.detalhe__rotulo {
+    font-size: var(--txt-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--tinta-2);
+}
+
+.detalhe__distancia strong {
+    font-size: var(--txt-destaque);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    white-space: nowrap;
+    color: var(--cor-destaque);
+}
+
+.detalhe__dados {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--espaco-2);
+    padding-left: var(--espaco-4);
+    border-left: 1px solid var(--borda);
+}
+
+.detalhe__dados dt {
+    font-size: var(--txt-xs);
+    color: var(--tinta-2);
+}
+
+.detalhe__dados dd {
+    font-size: var(--txt-lg);
+    font-weight: 700;
+}
+
+.detalhe__selos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-2);
+    list-style: none;
+}
+
+.detalhe__selos li {
+    padding: var(--espaco-1) var(--espaco-3);
+    border-radius: var(--raio-pilula);
+    background-color: var(--borda);
+    font-size: var(--txt-sm);
+    font-weight: 600;
+    color: var(--tinta-2);
+}
+
+.detalhe__selos .detalhe__selo--sim {
+    background-color: var(--cor-primaria-lavada);
+    color: var(--cor-primaria);
+}
+
+.detalhe__publicador {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    padding: var(--espaco-4);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+}
+
+.detalhe__pessoa {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-3);
+    color: var(--cor-primaria);
+}
+
+.detalhe__nome {
+    font-weight: 700;
+    color: var(--tinta);
+}

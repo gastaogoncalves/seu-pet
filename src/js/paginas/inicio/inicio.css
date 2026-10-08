@@ -1,0 +1,110 @@
+.inicio {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-4);
+}
+
+.inicio__marca {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-2);
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.inicio__pergunta {
+    font-size: var(--txt-2xl);
+    line-height: 1.2;
+}
+
+.inicio__busca {
+    display: flex;
+    gap: var(--espaco-2);
+}
+
+.inicio__campo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: var(--espaco-2);
+    min-width: 0;
+    padding: 0 var(--espaco-3);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    color: var(--tinta-2);
+}
+
+.inicio__campo input {
+    flex: 1;
+    border: none;
+    padding: var(--espaco-4) 0;
+    background: none;
+    outline: none;
+}
+
+.inicio__campo:focus-within {
+    border-color: var(--cor-primaria);
+}
+
+.inicio__botao {
+    display: flex;
+    flex: 0 0 56px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--raio);
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria-texto);
+}
+
+.inicio__atalhos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+}
+
+.inicio__atalhos h2 {
+    font-size: var(--txt-md);
+    margin-top: var(--espaco-2);
+}
+
+.inicio__lista {
+    display: flex;
+    gap: var(--espaco-2);
+    list-style: none;
+}
+
+.inicio__lista li {
+    display: flex;
+    flex: 1;
+}
+
+.inicio__atalho {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-2);
+    padding: var(--espaco-4) var(--espaco-2);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    color: var(--tinta);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.inicio__atalho:hover {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+.inicio__rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espaco-3);
+    padding-top: var(--espaco-4);
+    border-top: 1px solid var(--borda);
+}

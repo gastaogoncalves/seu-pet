@@ -1,20 +1,18 @@
-import buscar from '../paginas/buscar.js'
-import enviar from '../paginas/enviar.js'
-import mapa from '../paginas/mapa.js'
-import favorito from '../paginas/favorito.js'
-import conta from '../paginas/conta.js'
-import sorteio from '../paginas/sorteios/sorteio.js'
-import produtos from '../paginas/produtos/produtos.js'
-import naoEncontrada from '../paginas/naoEncontrada.js'
+import inicio from '../paginas/inicio/inicio.js'
+import resultados from '../paginas/resultados/resultados.js'
+import detalhe from '../paginas/detalhe/detalhe.js'
+import publicar from '../paginas/publicar/publicar.js'
+import conta from '../paginas/conta/conta.js'
+import naoEncontrada from '../paginas/naoEncontrada/naoEncontrada.js'
 
+// A lista única de telas. O roteador (main.js) e o menu (navbar.js) leem daqui.
+// Tela com label vazio não aparece no menu.
 const mapaderotas = [
-    buscar,
-    mapa,
-    enviar,
-    favorito,
+    inicio,
+    resultados,
+    detalhe,
+    publicar,
     conta,
-    sorteio,
-    produtos,
     naoEncontrada
 ]
 

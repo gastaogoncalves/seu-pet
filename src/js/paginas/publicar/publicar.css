@@ -1,0 +1,86 @@
+.publicar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-4);
+}
+
+.publicar--bloqueado {
+    align-items: center;
+    padding-top: var(--espaco-5);
+    text-align: center;
+}
+
+.publicar__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+}
+
+.publicar__form > label,
+.publicar__campo label,
+.publicar__linha legend {
+    margin-top: var(--espaco-2);
+    font-size: var(--txt-sm);
+    font-weight: 700;
+}
+
+/* só marca o erro depois que a pessoa mexeu no campo */
+.publicar__form :user-invalid {
+    border-color: var(--erro);
+}
+
+.publicar__linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-2);
+    border: none;
+}
+
+.publicar__linha legend {
+    margin-bottom: var(--espaco-2);
+}
+
+.publicar__campo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    min-width: 0;
+}
+
+.publicar__opcao {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: var(--espaco-2);
+    padding: var(--espaco-3);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+}
+
+.publicar__opcao:has(input:checked) {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-primaria-lavada);
+}
+
+.publicar__aviso {
+    color: var(--erro);
+    font-weight: 600;
+}
+
+.publicar__aviso:empty {
+    display: none;
+}
+
+.publicar__aviso a {
+    color: var(--erro);
+}
+
+/* a única cor de destaque desta tela: a ação de publicar */
+.botao--destaque {
+    margin-top: var(--espaco-2);
+    border-color: var(--cor-destaque);
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria-texto);
+}

@@ -1,0 +1,76 @@
+.foto-animal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--raio);
+    background-color: var(--cor-primaria-lavada);
+    color: var(--cor-primaria);
+    aspect-ratio: 1;
+}
+
+.foto-animal img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-animal--mini {
+    flex: 0 0 64px;
+}
+
+.lista-animais {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    list-style: none;
+}
+
+.cartao-animal {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-3);
+    padding: var(--espaco-3);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    box-shadow: 0 1px 4px var(--sombra);
+    color: var(--tinta);
+    text-decoration: none;
+}
+
+.cartao-animal__texto {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.cartao-animal__nome {
+    font-size: var(--txt-lg);
+}
+
+.cartao-animal__info {
+    color: var(--tinta-2);
+    font-size: var(--txt-sm);
+}
+
+.cartao-animal__distancia {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: var(--txt-xs);
+    color: var(--tinta-2);
+}
+
+.cartao-animal__distancia strong {
+    font-size: var(--txt-xl);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: var(--cor-destaque);
+}

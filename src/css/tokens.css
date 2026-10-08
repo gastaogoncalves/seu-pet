@@ -1,16 +1,39 @@
 :root {
-    --cor-primaria: #2EB51D;
+    /* cores cromáticas: uma principal (navegação, links, botões) e uma de destaque (a distância, que decide a escolha) */
+    --cor-primaria: #1f7a3a;
     --cor-primaria-texto: #ffffff;
-    --cor-destaque: #c41e20;
-    --fundo: #f6f7f6;
+    --cor-primaria-lavada: #e3f2e7;
+    --cor-destaque: #c2410c;
+    --cor-destaque-lavada: #fdeee6;
+
+    /* tinta e superfícies */
+    --tinta: #1c1f1d;
+    --tinta-2: #535a55;
+    --tinta-3: #7a817c;
+    --fundo: #f4f6f4;
     --superficie: #ffffff;
-    --tinta: #1f1f1f;
-    --tinta-2: #5a5959;
-    --borda: #e2e4e2;
-    --sombra: rgba(0, 0, 0, 0.08);
-    --raio: 12px;
+    --borda: #dfe3e0;
+    --sombra: #0000000f;
+    --erro: #b42318;
+    --erro-lavado: #fdecea;
+
+    /* tipografia */
+    --txt-xs: 0.75rem;
+    --txt-sm: 0.8125rem;
+    --txt-md: 0.875rem;
+    --txt-lg: 1rem;
+    --txt-xl: 1.1875rem;
+    --txt-2xl: 1.5rem;
+    --txt-destaque: 2.125rem;
+
+    /* grade de 4px */
     --espaco-1: 4px;
     --espaco-2: 8px;
-    --espaco-3: 16px;
-    --espaco-4: 24px;
+    --espaco-3: 12px;
+    --espaco-4: 16px;
+    --espaco-5: 24px;
+
+    --raio: 12px;
+    --raio-pilula: 999px;
+    --altura-navbar: 64px;
 }
