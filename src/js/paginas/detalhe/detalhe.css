@@ -28,7 +28,6 @@
     font-size: var(--txt-2xl);
 }
 
-/* o bloco que responde à pergunta do app: distância primeiro, porte e idade ao lado */
 .detalhe__decisao {
     display: flex;
     gap: var(--espaco-4);
