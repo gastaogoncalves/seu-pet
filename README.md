@@ -1,6 +1,6 @@
 # Seu Pet
 
-> **Projeto em construção.** Este repositório está em desenvolvimento ativo como projeto de estudos (FATEC) e ainda não representa uma versão final.
+> **Etapa da P1 concluída!**
 
 ## Sobre o projeto
 
@@ -86,7 +86,3 @@ O projeto segue uma estrutura simples de **SPA (Single Page Application) em Java
 ### Rodando como app nativo (Capacitor)
 
 Este projeto usa o [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app) como base. Para sincronizar o build web com os projetos nativos (Android/iOS), consulte a [documentação do Capacitor](https://capacitorjs.com/docs) — em resumo, após o `npm run build`, é necessário adicionar a plataforma desejada e sincronizar os arquivos web com o projeto nativo antes de rodar em um emulador ou dispositivo.
-
-## Status
-
-Este é um projeto didático em construção. Funcionalidades, estrutura de pastas e padrões podem mudar conforme o aprendizado avança.
