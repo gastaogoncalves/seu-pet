@@ -1,0 +1,99 @@
+.resultados {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-3);
+}
+
+.resultados__topo {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-2);
+}
+
+.resultados__voltar {
+    display: flex;
+    flex: 0 0 auto;
+    padding: var(--espaco-2);
+    color: var(--tinta);
+}
+
+.resultados__campo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: var(--espaco-2);
+    min-width: 0;
+    padding: 0 var(--espaco-3);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    color: var(--tinta-2);
+}
+
+.resultados__campo input {
+    flex: 1;
+    border: none;
+    padding: var(--espaco-3) 0;
+    background: none;
+    outline: none;
+}
+
+.resultados__campo:focus-within {
+    border-color: var(--cor-primaria);
+}
+
+.resultados__filtros {
+    display: flex;
+    gap: var(--espaco-2);
+}
+
+.resultados__filtros select {
+    flex: 1;
+    padding: var(--espaco-2) var(--espaco-3);
+}
+
+.resultados__resumo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espaco-2);
+}
+
+.resultados__ordem {
+    display: flex;
+    gap: var(--espaco-1);
+}
+
+.resultados__ordem-botao {
+    flex: 0 0 auto;
+    padding: var(--espaco-1) var(--espaco-3);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-pilula);
+    background-color: var(--superficie);
+    font-size: var(--txt-sm);
+    color: var(--tinta-2);
+}
+
+.resultados__ordem-botao--ativo {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-primaria-lavada);
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+.resultados__vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-2);
+    padding: var(--espaco-5) var(--espaco-4);
+    border: 1px dashed var(--borda);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    text-align: center;
+    color: var(--tinta-2);
+}
+
+.resultados__vazio h2 {
+    color: var(--tinta);
+}
