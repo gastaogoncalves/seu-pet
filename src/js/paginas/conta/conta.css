@@ -20,7 +20,6 @@
     margin-top: var(--espaco-2);
 }
 
-/* a única cor de destaque desta tela: o aviso de erro do login */
 .conta__erro {
     padding: var(--espaco-3);
     border-radius: var(--raio);

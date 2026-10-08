@@ -47,7 +47,6 @@
     border-color: var(--cor-primaria);
 }
 
-/* a única cor de destaque desta tela: a ação de buscar */
 .inicio__botao {
     display: flex;
     flex: 0 0 56px;

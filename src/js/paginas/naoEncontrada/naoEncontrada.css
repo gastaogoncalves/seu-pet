@@ -13,7 +13,6 @@
     color: var(--tinta);
 }
 
-/* a única cor de destaque desta tela */
 .nao-encontrada__codigo {
     font-size: var(--txt-destaque);
     font-weight: 800;
