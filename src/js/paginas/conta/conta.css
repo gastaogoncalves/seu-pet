@@ -1,0 +1,91 @@
+.conta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-4);
+}
+
+.conta__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+}
+
+.conta__form label {
+    margin-top: var(--espaco-2);
+    font-size: var(--txt-sm);
+    font-weight: 700;
+}
+
+.conta__form .botao {
+    margin-top: var(--espaco-2);
+}
+
+/* a única cor de destaque desta tela: o aviso de erro do login */
+.conta__erro {
+    padding: var(--espaco-3);
+    border-radius: var(--raio);
+    background-color: var(--cor-destaque-lavada);
+    color: var(--cor-destaque);
+    font-weight: 600;
+}
+
+.conta__erro:empty {
+    display: none;
+}
+
+.conta__dica {
+    padding: var(--espaco-3);
+    border-radius: var(--raio);
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+}
+
+.conta__sem-cadastro {
+    align-self: center;
+    font-weight: 600;
+}
+
+.conta__perfil {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espaco-3);
+    padding-bottom: var(--espaco-4);
+    border-bottom: 1px solid var(--borda);
+}
+
+.conta__identidade {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.conta__total {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: var(--txt-xs);
+    color: var(--tinta-2);
+}
+
+.conta__total strong {
+    font-size: var(--txt-2xl);
+    line-height: 1;
+    color: var(--cor-destaque);
+}
+
+.conta__titulo {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--espaco-2);
+}
+
+.conta__vazio {
+    padding: var(--espaco-4);
+    border: 1px dashed var(--borda);
+    border-radius: var(--raio);
+}

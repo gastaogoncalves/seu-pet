@@ -1,0 +1,22 @@
+.nao-encontrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-3);
+    padding-top: var(--espaco-5);
+    text-align: center;
+    color: var(--tinta-2);
+    overflow-wrap: anywhere;
+}
+
+.nao-encontrada h1 {
+    color: var(--tinta);
+}
+
+/* a única cor de destaque desta tela */
+.nao-encontrada__codigo {
+    font-size: var(--txt-destaque);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--cor-destaque);
+}
