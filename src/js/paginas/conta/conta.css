@@ -73,7 +73,7 @@
 .conta__total strong {
     font-size: var(--txt-2xl);
     line-height: 1;
-    color: var(--cor-destaque);
+    color: var(--cor-primaria);
 }
 
 .conta__titulo {
