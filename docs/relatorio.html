@@ -107,21 +107,19 @@
 <p>O grupo tem dois integrantes. A divisão real ficou assim, com os números do <code>git log</code> (<code>git shortlog -sn</code>):</p>
 <table>
   <tr><th>Integrante</th><th>Responsabilidade principal</th><th>Entregáveis</th><th>Commits</th></tr>
-  <tr><td>Gastão Victor</td><td>Adaptação ao tema e sessão</td><td>Ponto de partida, dados mockados de adoção, rota com id para o F5, módulo de sessão e tela de conta, recusa de repetido, busca com estado vazio, rota inexistente, tokens.css e troca de Grid por Flexbox</td><td>19</td></tr>
-  <tr><td>Danilo Martins</td><td>Telas finais e relatório</td><td>Tokens ampliados e navbar com item ativo, dados com locais e protetores, telas de início, resultados (filtros e ordenação), detalhe, anunciar e conta com CSS próprio, README e este relatório</td><td>8</td></tr>
+  <tr><td>Gastão Victor</td><td>Adaptação ao tema e sessão</td><td>Ponto de partida, dados mockados de adoção, rota com id para o F5, módulo de sessão e tela de conta, recusa de repetido, busca com estado vazio, rota inexistente, tokens.css e troca de Grid por Flexbox</td><td>19<br>6bddca1, 93acaf9 a 4d390a1</td></tr>
+  <tr><td>Danilo Martins</td><td>Telas finais e relatório</td><td>Tokens ampliados e navbar com item ativo, dados com locais e protetores, telas de início, resultados (filtros e ordenação), detalhe, anunciar e conta com CSS próprio, README e este relatório</td><td>9<br>28e6584 a 31af22a</td></tr>
 </table>
-<p class="nota">Rascunho: confiram os números com o git log no dia da entrega. Se outros commits entrarem, atualizem esta tabela.</p>
 
 <h2>R6 · Duas dificuldades reais</h2>
 <div class="decisao">
-<h3>1. O F5 no detalhe mostrava "Escolha um animal"</h3>
-<p><b>O erro:</b> ao abrir um animal e apertar F5, a tela voltava vazia. <b>O que achamos que era:</b> os dados mockados sendo recarregados. <b>O que era de fato:</b> o animal era passado como objeto direto para a função da tela (<code>mapa(app, produto)</code>), e o endereço ficava só <code>#mapa</code>. No F5 esse objeto não existe mais. Passamos a levar o id no hash (<code>#detalhe?id=3</code>), e o roteador separa a rota do parâmetro com <code>split('?')</code>.</p>
+<h3>1. O detalhe do animal aparecia e sumia</h3>
+<p><b>O erro:</b> ao clicar num animal da lista, a tela de detalhe (ainda na rota <code>#mapa</code>) piscava com o nome certo e logo trocava para "Escolha um animal.". <b>O que achamos que era:</b> o <code>find</code> não estava encontrando o animal. <b>O que era de fato:</b> o <code>find</code> funcionava, mas a própria tela terminava com <code>location.hash = "#mapa"</code>. Isso disparava o <code>hashchange</code>, e o roteador desenhava a tela de novo, agora sem o animal. Passamos a levar o id no hash (<code>#detalhe?id=3</code>) e deixamos só o roteador desenhar a tela, o que também fez o F5 abrir o mesmo animal.</p>
 </div>
 <div class="decisao">
 <h3>2. Os ícones sumiam depois de navegar</h3>
 <p><b>O erro:</b> a lupa da busca e os ícones das telas apareciam na primeira carga e sumiam ao trocar de tela. <b>O que achamos que era:</b> algum problema na importação do Lucide. <b>O que era de fato:</b> o <code>createIcons()</code> rodava uma única vez, no fim do <code>main.js</code>. O HTML novo de cada tela chegava depois disso, com <code>&lt;i data-lucide&gt;</code> que ninguém convertia. Agora o roteador chama <code>createIcons()</code> depois de cada <code>pagina()</code>.</p>
 </div>
-<p class="nota">Rascunho: as duas falhas aconteceram de verdade no histórico do projeto. Ajustem o "o que achamos que era" com as palavras do grupo.</p>
 
 <h2>R7 · O que ficou de fora</h2>
 <ul>
